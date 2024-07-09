@@ -137,6 +137,7 @@ class Game{
 		
 		for(let sprite of this.sprites){
 			if(sprite.index === 4 && sprite.opacity == 0){
+				this.wrongSfx.play()
 				this.score--
 			}
 			if (sprite==null) continue;
