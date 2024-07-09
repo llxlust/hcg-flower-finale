@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./gameSound.js"></script>
+    <script src="./sfx.js"></script>
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.2rem;
+    }
+    body{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .container{
+        border: 1px solid black;
+        width: auto;
+        height: auto;
+        padding: 2rem;
+    }
+    button:hover{
+        cursor: pointer;
+        border: none;
+        outline: none;
+        background-color: rgba(127, 255, 212, 0.623);
+    }
+    button{
+        border: none;
+        outline: none;
+        padding: 5px 10px;
+        background-color: aquamarine;
+        border-radius: 5px;
+    }
+    .container > div {
+        margin-bottom: 20px;
+    }
+</style>
+<body>
+    <div class="container">
+        <div>
+            <button>Play sound</button>
+            <input type="checkbox"/>
+        </div>
+        <div>
+            <button>Stop sound</button>
+            <input type="range"/>
+        </div>
+        <div>
+            <label>value</label>
+            <button>stop music</button>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded',function(event){
+            const game = new GameSound()
+            window.game = game
+        })
+    </script>
+</body>
+</html>
